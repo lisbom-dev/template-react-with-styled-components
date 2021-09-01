@@ -10,7 +10,7 @@ const RouteWrapper: React.FC<RouteWrapperProps> = ({
   isPrivate = false,
   ...rest
 }) => {
-  const signed = false;
+  const signed = false; // overrite this value with the isAuthenticated verification using your current authentication context
   if (!signed && isPrivate) {
     return <Redirect to="/login" />;
   }
